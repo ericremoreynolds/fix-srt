@@ -26,6 +26,8 @@ def read_sub(i, ls):
     times = map(read_time, ls[i].split(' --> '))
     i += 1
     text = []
+    while i < len(ls) and not ls[i].strip():
+        i += 1
     while i < len(ls) and ls[i].strip():
         text.append(ls[i].strip())
         i += 1
